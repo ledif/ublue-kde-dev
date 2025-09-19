@@ -48,5 +48,3 @@ ln -sf /usr/share/kde-builder/data/completions/zsh/_kde-builder_projects_and_gro
 
 rm -rf "$tmpdir"
 
-ostree container commit
-
