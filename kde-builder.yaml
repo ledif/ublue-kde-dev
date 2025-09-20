@@ -11,11 +11,11 @@ global:
   # projects being installed that you didn't need.
   include-dependencies: true
 
-  source-dir: /var/run/host/var/local/kde-dev/kde/src  # Directory for downloaded source code
-  build-dir: /var/run/host/var/local/kde-dev/kde/build  # Directory to build KDE into before installing
-  install-dir: /var/run/host/var/local/kde-dev/kde/usr  # Directory to install KDE software into
-  qt-install-dir: /var/run/host/var/local/kde-dev/kde/qt  # Directory to install Qt if kde-builder supplies it
-  log-dir: /var/run/host/var/local/kde-dev/kde/log  # Directory to write logs into
+  source-dir: /var/local/kde-dev/kde/src  # Directory for downloaded source code
+  build-dir: /var/local/kde-dev/kde/build  # Directory to build KDE into before installing
+  install-dir: /var/local/kde-dev/kde/usr  # Directory to install KDE software into
+  qt-install-dir: /var/local/kde-dev/kde/qt  # Directory to install Qt if kde-builder supplies it
+  log-dir: /var/local/kde-dev/kde/log  # Directory to write logs into
 
   cmake-options: >
     -DCMAKE_BUILD_TYPE=RelWithDebInfo
