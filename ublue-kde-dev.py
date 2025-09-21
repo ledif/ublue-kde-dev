@@ -55,6 +55,20 @@ def copy_config(home_dir):
 
     print(f"✓ Copied {kde_builder_config} to {target_config}")
 
+def copy_config(home_dir):
+    # Resolve the directory where this script lives necessary for packaging in /usr/share
+    script_dir = Path(__file__).resolve().parent
+    kde_builder_config = script_dir / "kde-builder.yaml"
+
+    if not kde_builder_config.exists():
+        print(f"Error: {kde_builder_config} not found in {script_dir}")
+        sys.exit(1)
+
+    target_config = home_dir / ".config" / "kde-builder.yaml"
+    shutil.copy2(kde_builder_config, target_config)
+
+    print(f"✓ Copied {kde_builder_config} to {target_config}")
+
 
 def create_distrobox():
     """Create the distrobox container."""
