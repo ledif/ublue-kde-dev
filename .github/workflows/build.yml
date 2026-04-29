@@ -7,6 +7,8 @@ on:
     branches: [ main ]
   schedule:
     - cron: "50 5 * * 0" # 5:50 UTC sunday
+  workflow_dispatch:
+
 env:
   IMAGE_NAME: ${{ github.repository }}
 
